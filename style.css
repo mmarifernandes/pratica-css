@@ -115,7 +115,7 @@ nav a {
 
 @media (max-width:800px) {
     img {
-        width: 100% !important;
+        width: 100% !important ;
     }
 
     .block {
