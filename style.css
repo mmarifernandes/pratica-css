@@ -14,7 +14,7 @@ h1 {
 h2 {
     animation: subtitle 5s;
     color: turquoise;
-    margin-left: 40px;
+    margin-left: 2.5vw;
 }
 
 h3 {
@@ -162,13 +162,23 @@ nav img {
     padding: 10px;
 }
 
+
+
 @media (max-width:950px) {
     .titulo {
         font-size: 4.5rem;
     }
 }
 
+.closebtn{
+    display: none;
+}
+
 @media (max-width:800px) {
+    
+    .closebtn{
+        display: block;
+    }
     img {
         width: 100% !important;
     }
@@ -197,6 +207,8 @@ nav img {
     }
 
     .sidebar {
+        background-color: rgb(62, 69, 79) !important;
+        width: 65% !important;
         display: none !important;
     }
 
@@ -207,6 +219,11 @@ nav img {
     nav img {
         width: 8% !important;
 
+    }
+
+    #open{
+        color: rgb(220, 220, 220);
+        display: flex !important;
     }
 }
 
@@ -293,4 +310,12 @@ nav img {
 
 .left-sidebar p {
     font-size: 12px;
+}
+
+#open{
+    display: none;
+    margin-right: auto;
+    margin-left: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
 }

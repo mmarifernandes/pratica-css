@@ -9,6 +9,7 @@
 <body>
     <nav>
         <img src="Purple_Circle.png"class="icon">
+        <i id="open" class="fa-solid fa-bars" onclick="Open()"></i>
         <ul>
             <a href="#menu"><li>menu</li></a>
             <a href="#about_us"><li>about us</li></a>
@@ -65,4 +66,21 @@
 </div>
 </div>
 </body>
+<script src="https://kit.fontawesome.com/84a7caccb6.js" crossorigin="anonymous"></script>
+<script>
+    function Close(){
+        let sidebar = document.getElementsByClassName("sidebar")
+        let icon = document.getElementById("open")
+        icon.setAttribute( "onClick", "javascript: Open();" );
+        icon.className = "fa-solid fa-bars"
+        sidebar[0].style.display = "none";
+    }
+    function Open(){
+        let sidebar = document.getElementsByClassName("sidebar")
+        let icon = document.getElementById("open")
+        icon.setAttribute( "onClick", "javascript: Close();" );
+        icon.className = "fa-solid fa-xmark"
+        sidebar[0].style.setProperty("display", "inline-flex", "important");
+    }
+</script>
 </html>
