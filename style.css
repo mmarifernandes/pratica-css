@@ -4,17 +4,7 @@
     font-family: Poppins, Helvetica, sans-serif;
 }
 
-.titulo {
-    animation: enter 5s;
-    background-image: linear-gradient(to bottom, rgb(234, 79, 205), rgb(127, 70, 180), turquoise);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: black;
-    margin-left: 15px;
-    margin-right: 15px;
-    line-height: 100%;
-}
+
 
 h1 {
     text-align: center;
@@ -24,7 +14,7 @@ h1 {
 h2 {
     animation: subtitle 5s;
     color: turquoise;
-    margin-left: 24%;
+    margin-left: 40px;
 }
 
 h3 {
@@ -36,6 +26,19 @@ p {
     font-size: 14px;
     font-weight: lighter;
 }
+
+body {
+    background-color: rgb(34, 34, 40);
+    margin: 0;
+    height: 100%;
+    /* overflow-y: scroll; */
+}
+
+
+
+
+
+
 
 @keyframes enter {
     0% {
@@ -65,16 +68,43 @@ p {
     }
 }
 
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.titulo {
+    animation: enter 5s;
+    background-image: linear-gradient(to bottom, rgb(234, 79, 205), rgb(127, 70, 180), turquoise);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 100%;
+}
+
+
+.home{
+    display: flex;
+    align-self: center;
+    width: 60%;
+    flex-direction: column;
+}
+
+
 .block {
     background-color: rgba(92, 106, 124, 0.395);
     padding: 25px;
     justify-content: center;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 15px;
-
-    margin: auto;
-    width: 50%;
+    margin-bottom: 3% !important;
+    margin: 0 auto;
+    width: 85%;
     border-radius: 8px;
     color: rgb(220, 220, 220);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -82,11 +112,16 @@ p {
 }
 
 
-body {
-    background-color: rgb(34, 34, 40);
-    margin: 0;
-
+.block img {
+    display: block;
+    width: 100%;
+    height: 40%;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
+
+
 
 nav {
     display: flex;
@@ -96,6 +131,7 @@ nav {
     padding-right: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: rgba(92, 106, 124, 0.24);
+    align-items: center;
 }
 
 nav ul {
@@ -119,13 +155,11 @@ nav a {
     color: white;
 }
 
-.block img {
-    display: block;
-    width: 100%;
-    height: 40%;
-    margin: 0 auto;
-    margin-top: 2%;
-    margin-bottom: 2%;
+
+nav img {
+    width: 3%;
+    height: 3%;
+    padding: 10px;
 }
 
 @media (max-width:950px) {
@@ -136,9 +170,12 @@ nav a {
 
 @media (max-width:800px) {
     img {
-        width: 100% !important ;
+        width: 100% !important;
     }
 
+    .home{
+        width: 100% !important;
+    }
     .block {
         background-color: rgba(92, 106, 124, 0.395);
         padding: 15px;
@@ -162,18 +199,18 @@ nav a {
     .sidebar {
         display: none !important;
     }
+
     .left-sidebar {
         display: none !important;
     }
-    nav img{
-        width: 10% !important;
-       
+
+    nav img {
+        width: 8% !important;
+
     }
 }
 
-.home {
-    position: absolute;
-}
+
 
 .sidebar {
     background-color: rgba(92, 106, 124, 0.395);
@@ -181,9 +218,10 @@ nav a {
     justify-content: left;
     width: 20%;
     flex-direction: column;
-    height: 180vh;
+    height: 100%;
     position: absolute;
     margin: 0 auto;
+    z-index: 1;
 }
 
 .sidebar ul {
@@ -213,38 +251,45 @@ nav a {
     box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px
 }
 
-nav img{
-    width: 3%;
-    height: 3%;
-    padding: 10px;
-}
+
+
 
 .left-sidebar {
     background-color: rgba(92, 106, 124, 0.395);
     display: inline-flex;
     justify-content: right;
-    width: 20%;
-    flex-direction: column;
+    width: 100%;
+        flex-direction: column;
     height: 83vh;
     margin-top: 50px;
+    height: 100%;
     position: relative;
-    float: right;
     border-radius: 8px 0 0 8px;
     overflow-y: hidden;
 
 }
-.left{
+
+.left {
     display: flex;
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    align-self: end;
     flex-direction: column;
-    /* justify-content: space-around; */
-    align-items: flex-end;
 }
 
-.left-sidebar h4, p{
+.left-sidebar h4 {
     color: rgb(220, 220, 220);
     padding-left: 15px;
     padding-right: 15px;
 }
+
+.left-sidebar p {
+    color: rgb(220, 220, 220);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 
 .left-sidebar p {
     font-size: 12px;
