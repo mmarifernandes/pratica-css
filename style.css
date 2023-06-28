@@ -210,6 +210,8 @@ nav img {
         background-color: rgb(62, 69, 79) !important;
         width: 65% !important;
         display: none !important;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
     }
 
     .left-sidebar {
