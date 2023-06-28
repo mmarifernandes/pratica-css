@@ -22,7 +22,7 @@ h1 {
 }
 
 h2 {
-    animation: enter 5s;
+    animation: subtitle 5s;
     color: turquoise;
     margin-left: 24%;
 }
@@ -48,6 +48,20 @@ p {
 
     from {
         margin-left: 10%;
+    }
+}
+
+@keyframes subtitle {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+    from {
+        margin-left: 30%;
     }
 }
 
@@ -114,6 +128,12 @@ nav a {
     margin-bottom: 2%;
 }
 
+@media (max-width:950px) {
+    .titulo {
+        font-size: 4.5rem;
+    }
+}
+
 @media (max-width:800px) {
     img {
         width: 100% !important ;
@@ -140,6 +160,9 @@ nav a {
     }
 
     .sidebar {
+        display: none !important;
+    }
+    .left-sidebar {
         display: none !important;
     }
     nav img{
@@ -194,4 +217,35 @@ nav img{
     width: 3%;
     height: 3%;
     padding: 10px;
+}
+
+.left-sidebar {
+    background-color: rgba(92, 106, 124, 0.395);
+    display: inline-flex;
+    justify-content: right;
+    width: 20%;
+    flex-direction: column;
+    height: 83vh;
+    margin-top: 50px;
+    position: relative;
+    float: right;
+    border-radius: 8px 0 0 8px;
+    overflow-y: hidden;
+
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    align-items: flex-end;
+}
+
+.left-sidebar h4, p{
+    color: rgb(220, 220, 220);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.left-sidebar p {
+    font-size: 12px;
 }
