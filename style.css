@@ -68,6 +68,16 @@ body {
     }
 }
 
+@keyframes turn {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+}
+
+
 
 
 .main{
@@ -211,7 +221,7 @@ nav img {
         width: 65% !important;
         display: none !important;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
+        transition: all 0.15s ease;
     }
 
     .left-sidebar {
@@ -226,7 +236,15 @@ nav img {
     #open{
         color: rgb(220, 220, 220);
         display: flex !important;
+        transform: rotate(360deg);
+        transition: transform 0.5s;
+        /* animation: turn 2s; */
     }
+
+    #open:active {
+        transform: rotate(0deg);
+        transition:  0s;
+      }
 }
 
 
