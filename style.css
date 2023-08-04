@@ -70,28 +70,54 @@ body {
 
 @keyframes slidein {
     from {
-      margin-left: -100%;
+        margin-left: -100%;
     }
-  
+
     to {
-      margin-left: 0%;
+        margin-left: 0%;
     }
-  }
+}
 
 
-  @keyframes slideout {
+@keyframes slideout {
 
     from {
-      margin-left: 0%;
+        margin-left: 0%;
     }
-  
+
     to {
-      margin-left: -100%;
+        margin-left: -100%;
     }
 
-  }
+}
 
-.main{
+
+@keyframes left {
+
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: 45px;
+    }
+
+}
+
+
+@keyframes right {
+
+    0% {
+        margin-left: 45px;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+
+}
+
+.main {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -111,7 +137,7 @@ body {
 }
 
 
-.home{
+.home {
     display: flex;
     align-self: center;
     width: 60%;
@@ -191,22 +217,24 @@ nav img {
     }
 }
 
-.closebtn{
+.closebtn {
     display: none;
 }
 
 @media (max-width:800px) {
-    
-    .closebtn{
+
+    .closebtn {
         display: block;
     }
+
     img {
         width: 100% !important;
     }
 
-    .home{
+    .home {
         width: 100% !important;
     }
+
     .block {
         background-color: rgba(92, 106, 124, 0.395);
         padding: 15px;
@@ -235,6 +263,14 @@ nav img {
         transition: all 0.15s ease;
     }
 
+    .sidebar.light-mode {
+        background-color: rgb(198 198 198) !important;
+
+    }
+
+
+
+
     .left-sidebar {
         display: none !important;
     }
@@ -244,11 +280,11 @@ nav img {
 
     }
 
-    nav li{
+    nav li {
         font-size: 3.2vw;
     }
 
-    #open{
+    #open {
         color: rgb(220, 220, 220);
         display: flex !important;
         transform: rotate(360deg);
@@ -257,18 +293,35 @@ nav img {
 
     #open:active {
         transform: rotate(0deg);
-        transition:  0s;
-      }
+        transition: 0s;
+    }
 
-      #opened {
+    #opened {
         animation: slidein 1s !important;
-      }
+    }
 
-      #closed {
+    #closed {
         animation: slideout 1s !important;
-      }
+    }
+
+
 }
 
+#slide_in {
+    animation: left 1s 1;
+    animation-fill-mode: forwards;
+    transform: rotate(360deg);
+    transition: transform 0.5s;
+
+}
+
+#slide_out {
+    animation: right 1s 1;
+    animation-fill-mode: forwards;
+    transform: rotate(-360deg);
+    transition: transform 0.5s;
+
+}
 
 
 .sidebar {
@@ -318,7 +371,7 @@ nav img {
     display: inline-flex;
     justify-content: right;
     width: 100%;
-        flex-direction: column;
+    flex-direction: column;
     height: 83vh;
     margin-top: 50px;
     height: 100%;
@@ -354,7 +407,7 @@ nav img {
     font-size: 12px;
 }
 
-#open{
+#open {
     display: none;
     margin-right: auto;
     margin-left: 15px;
@@ -362,67 +415,88 @@ nav img {
     cursor: pointer;
 }
 
-.dot {
-    height: 25px;
+.fa-solid.fa-sun {
+    height: 20px;
     width: 25px;
-    background-color: #bbb;
-    border-radius: 50%;
-  }
+    margin-left: 5px;
 
-  .theme-change{
+}
+
+.fa-solid.fa-moon {
+    height: 20px;
+    width: 25px;
+    margin-left: 5px;
+}
+
+.theme-change {
     background-color: aliceblue;
     width: 70px;
     border-radius: 20px;
     display: flex;
     margin-right: 15px;
-  }
+}
 
-  .light-mode {
+.light-mode {
     background-color: #f3f3f3;
     color: black;
 }
 
-.block.light-mode{
-    background-color: rgb(198 198 198 / 40%);
-    color: black;
-    
-}
-
-.sidebar.light-mode{
+.block.light-mode {
     background-color: rgb(198 198 198 / 40%);
     color: black;
 
 }
 
-.sidebar.light-mode ul{
-    /* background-color: rgb(198 198 198 / 40%); */
-    color: black;
-
-}
-.sidebar.light-mode h3{
-    /* background-color: rgb(198 198 198 / 40%); */
-    color: black;
-
-}
-.sidebar.light-mode li{
-    /* background-color: rgb(198 198 198 / 40%); */
-    color: black;
-
-}
-.left-sidebar.light-mode{
+.sidebar.light-mode {
     background-color: rgb(198 198 198 / 40%);
+    color: rgb(131, 27, 210);
+    ;
+
+}
+
+.sidebar.light-mode ul {
     color: black;
 
 }
 
-.left-sidebar.light-mode p{
-    /* background-color: rgb(198 198 198 / 40%); */
+.sidebar.light-mode h3 {
+    color: rgb(131, 27, 210);
+    ;
+
+}
+
+.sidebar.light-mode li {
     color: black;
 
 }
 
-.left-sidebar.light-mode h4{
-    /* background-color: rgb(198 198 198 / 40%); */
+.left-sidebar.light-mode {
+    background-color: rgb(198 198 198 / 40%);
+    color: rgb(131, 27, 210);
+    ;
+
+}
+
+.left-sidebar.light-mode p {
     color: black;
 
+}
+
+.left-sidebar.light-mode h4 {
+    color: rgb(131, 27, 210);
+
+}
+
+
+.light-mode nav {
+    background-color: #d2d2d2;
+    color: black;
+}
+
+.light-mode a {
+    color: rgb(131, 27, 210);
+}
+
+.light-mode i {
+    color: rgb(131, 27, 210) !important;
 }

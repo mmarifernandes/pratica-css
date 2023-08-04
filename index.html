@@ -7,12 +7,13 @@
     <title>Exercicio</title>
 </head>
 <body>
-    <nav>
+    <nav id="navbar">
         <img src="/images/Purple_Circle.png" class="icon">
         <i id="open" class="fa-solid fa-bars" onclick="Open()"></i>
         <ul>
             <div class="theme-change">
-                <span class="dot" onclick="lightMode()"></span>
+                
+                <span class="dot" onclick="lightMode(); slide_in()"><i class="fa-solid fa-moon" id="icon-color"></i></span>
             </div>
             <a href="#menu"><li>menu</li></a>
             <a href="#about_us"><li>about us</li></a>
@@ -91,24 +92,37 @@
         sidebar[0].style.setProperty("display", "inline-flex", "important");
     }
 
+    function slide_in() {
+        let dot = document.getElementsByClassName("dot")
+        let icon = document.getElementById("icon-color");
+        dot[0].setAttribute("onClick", "javascript: lightMode(); slide_out();");
+        icon.className = "fa-solid fa-sun"
+        dot[0].id = "slide_in"
+    }
+
+    function slide_out() {
+        let icon = document.getElementById("icon-color");
+        let dot = document.getElementsByClassName("dot")
+        dot[0].setAttribute("onClick", "javascript: lightMode(); slide_in();");
+        dot[0].id = "slide_out"
+        icon.className = "fa-solid fa-moon"
+
+    }
+
     function lightMode() {
             let element = document.body;
             let block = document.getElementsByClassName('block');
             let left_sidebar = document.getElementsByClassName('left-sidebar')
             let sidebar = document.getElementsByClassName('sidebar')
-            let nav = document.getElementsByClassName('sidebar')
+            let nav = document.getElementById('navbar')
 
             block[0].classList.toggle("light-mode");
             block[1].classList.toggle("light-mode");
             block[2].classList.toggle("light-mode");
-
-            // block[0].style.color = "black"
             left_sidebar[0].classList.toggle("light-mode");
             left_sidebar[1].classList.toggle("light-mode");
-
-            // left_sidebar[0].style.color = "black"
             sidebar[0].classList.toggle("light-mode");
-            // sidebar[0].style.color = "black"
+            nav.classList.toggle("light-mode")
             element.classList.toggle("light-mode");
         }
 
