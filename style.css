@@ -361,3 +361,68 @@ nav img {
     font-size: 1.5rem;
     cursor: pointer;
 }
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+  }
+
+  .theme-change{
+    background-color: aliceblue;
+    width: 70px;
+    border-radius: 20px;
+    display: flex;
+    margin-right: 15px;
+  }
+
+  .light-mode {
+    background-color: #f3f3f3;
+    color: black;
+}
+
+.block.light-mode{
+    background-color: rgb(198 198 198 / 40%);
+    color: black;
+    
+}
+
+.sidebar.light-mode{
+    background-color: rgb(198 198 198 / 40%);
+    color: black;
+
+}
+
+.sidebar.light-mode ul{
+    /* background-color: rgb(198 198 198 / 40%); */
+    color: black;
+
+}
+.sidebar.light-mode h3{
+    /* background-color: rgb(198 198 198 / 40%); */
+    color: black;
+
+}
+.sidebar.light-mode li{
+    /* background-color: rgb(198 198 198 / 40%); */
+    color: black;
+
+}
+.left-sidebar.light-mode{
+    background-color: rgb(198 198 198 / 40%);
+    color: black;
+
+}
+
+.left-sidebar.light-mode p{
+    /* background-color: rgb(198 198 198 / 40%); */
+    color: black;
+
+}
+
+.left-sidebar.light-mode h4{
+    /* background-color: rgb(198 198 198 / 40%); */
+    color: black;
+
+}
